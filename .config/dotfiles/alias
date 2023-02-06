@@ -29,16 +29,15 @@ s sudo
 co  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME
 
 ## dotfiles bare repo
-# cocl   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME clone
 # core   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME remote
 # corev  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME remote -v
-# cos    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME status
+cos    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME status
 # cod    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME diff
 # cord   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME range-diff
-# coa    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME add
-# coc    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME commit
-# cocm   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME commit -m
-# col    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME log
+coa    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME add
+coc    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME commit
+cocm   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME commit -m
+col    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME log
 # colo   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME log --oneline
 # colog  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME log --oneline --graph
 # copp   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME pull && git push
