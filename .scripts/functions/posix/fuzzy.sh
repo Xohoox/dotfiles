@@ -4,13 +4,13 @@ fzfstyle="--border=rounded"
 
 vsc()
 {
-	file=$(find $XDG_SCRIPTS_HOME -type f -printf '%P\n' | fzf $fzfstyle --prompt="$EDITOR ")
+	file=$(find "$XDG_SCRIPTS_HOME" -type f -printf '%P\n' | fzf $fzfstyle --prompt="$EDITOR ")
 	[ "$file" != "" ] && $EDITOR "$XDG_SCRIPTS_HOME/$file"
 }
 
 vco()
 {
-	file=$(find "$XDG_CONFIG_HOME" -type f -printf '%P\n' | grep -vFf $XDG_CONFIG_HOME/fzf/exclude.conf  | fzf $fzfstyle --prompt="$EDITOR ")
+	file=$(find "$XDG_CONFIG_HOME" -type f -printf '%P\n' | grep -vFf "$XDG_CONFIG_HOME/dotfiles/vco-exclude.conf"  | fzf $fzfstyle --prompt="$EDITOR ")
 	[ "$file" != "" ] && $EDITOR "$XDG_CONFIG_HOME/$file"
 }
 
@@ -18,24 +18,24 @@ vco()
 gchf()
 {
 	[ -d .git ] || return
-	git checkout $(git branch | fzf $fzfstyle --prompt='git checkout ' || return)
+	git checkout $(git branch | fzf "$fzfstyle" --prompt='git checkout ' || return)
 }
 
 sshf()
 {
-	host=$(cat $HOME/.ssh/hosts | fzf $fzfstyle --prompt="$ssh ")
-	[ "$host" != "" ] && ssh $(echo "$host" | cut -f2 -d ' ')
+	host=$(cat $HOME/.ssh/hosts | fzf $fzfstyle --prompt='ssh ')
+	[ "$host" != "" ] && ssh "$(echo "$host" | cut -f2 -d ' ')"
 }
 
 gmf()
 {
 	[ -d .git ] || return
-	git merge $(git branch | fzf $fzfstyle --prompt='git merge ' || return)
+	git merge "$(git branch | fzf $fzfstyle --prompt='git merge ' || return)"
 }
 
 c()
 {
-	cd $(find -type d | fzf $fzfstyle --prompt='cd ' || return)
+	cd "$(find -type d | fzf $fzfstyle --prompt='cd ' || return)"
 }
 
 dwmapply()
