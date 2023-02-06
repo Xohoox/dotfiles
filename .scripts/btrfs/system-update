@@ -1,0 +1,21 @@
+#!/bin/sh
+
+[ -z "$(mount | grep subvol=/@snapshots/TESTING)" ] && echo "You have to boot the TESTING snapshot!" && exit
+
+# ---- OLDSTABLE ----
+sudo btrfs subvolume delete /.snapshots/OLDSTABLE/
+sudo mv /.snapshots/STABLE /.snapshots/OLDSTABLE/
+sudo sed -i 's/STABLE/OLDSTABLE/g' /.snapshots/OLDSTABLE/etc/fstab
+sudo cp /boot/vmlinuz-linux-lts-stable /boot/vmlinuz-linux-lts-oldstable
+sudo cp /boot/initramfs-linux-lts-stable.img /boot/initramfs-linux-lts-oldstable.img
+
+# ---- STABLE ----
+sudo btrfs subvolume snapshot / /.snapshots/STABLE
+sudo sed -i 's/TESTING/STABLE/g' /.snapshots/STABLE/etc/fstab
+sudo cp /boot/vmlinuz-linux-lts /boot/vmlinuz-linux-lts-stable
+sudo cp /boot/initramfs-linux-lts.img /boot/initramfs-linux-lts-stable.img
+
+# ---- Update System ----
+sudo reflector --verbose --country 'Germany' -l 150 -p https --sort rate --save /etc/pacman.d/mirrorlist
+yay -Syu
+sudo btrfs balance start -dusage=5 /btrfs

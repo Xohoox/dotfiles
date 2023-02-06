@@ -1,0 +1,116 @@
+# no tabs!
+
+cdwm  cd $XDG_REPOS_HOME/suckless/dwm
+cdst  cd $XDG_REPOS_HOME/suckless/st
+
+# ls
+l  lsd -l
+ls   lsd
+la  lsd -al
+lsa lsd -a
+lsl lsd -1
+lal lsd -a1
+
+# lt  lsd -l --tree
+# lst   lsd --tree
+# lat  lsd -al --tree
+# lsat lsd -a --tree
+# lslt lsd -1 --tree
+# lalt lsd -a1 --tree
+
+# vim
+v   $EDITOR
+# sv  "sudo $EDITOR "
+
+# sudo
+s sudo
+
+# bare repos
+co  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME
+
+## dotfiles bare repo
+# cocl   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME clone
+# core   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME remote
+# corev  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME remote -v
+# cos    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME status
+# cod    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME diff
+# cord   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME range-diff
+# coa    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME add
+# coc    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME commit
+# cocm   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME commit -m
+# col    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME log
+# colo   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME log --oneline
+# colog  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME log --oneline --graph
+# copp   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME pull && git push
+# copl   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME pull
+# cops   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME push
+# copa   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME push --all
+# copu   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME push -u
+# cof    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME fetch
+# cost   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME stash
+# costl  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME stash list
+# costp  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME stash pop
+# cob    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME branch
+# cobd   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME branch -D
+# cobm   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME branch -m
+# coch   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME checkout
+# cochb  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME checkout -B
+# cochd  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME checkout dev
+# com    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME merge
+# cor    git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME reset
+# corh   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME reset --hard
+# cocpk  git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME cherry-pick
+# coap   git --git-dir=$XDG_REPOS_SYS/dotfiles/ --work-tree=$HOME apply
+
+# network
+myip   curl https://checkipv4.dedyn.io/
+myip6  curl https://checkipv6.dedyn.io/
+# speed  speedtest-cli
+
+## wireguard
+# wgup     sudo wg-quick up
+# wgdown   sudo wg-quick down
+
+# wget
+wget  wget --hsts-file=$XDG_CACHE_HOME/wget/wget-hsts
+
+# Git
+# g     git
+# gcl   git clone
+# gre   git remote
+# grev  git remote -v
+# grea  git remote add
+# gs    git status
+# gd    git diff
+# grd   git range-diff
+# ga    git add
+# gaa   git add --all
+# gc    git commit
+# gcm   git commit -m
+# gl    git log
+# glo   git log --oneline
+# glog  git log --oneline --graph
+# gpp   git pull && git push
+# gpl   git pull
+# gps   git push
+# gpa   git push --all
+# gpu   git push -u
+# gf    git fetch
+# gst   git stash
+# gstl  git stash list
+# gstp  git stash pop
+# gb    git branch
+# gbd   git branch -D
+# gbm   git branch -m
+# gch   git checkout
+# #gchm  git checkout main # todo: script main master
+# gchm  git-checkout.sh main
+# gchb  git checkout -B
+# #gchd  git checkout dev # todo: script dev develop
+# gchd  git-checkout.sh dev
+# gm    git merge
+# gr    git reset
+# grh   git reset --hard
+# gcpk  git cherry-pick
+# gap   git apply
+# # todo: git tag

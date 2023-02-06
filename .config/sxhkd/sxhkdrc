@@ -1,0 +1,86 @@
+#super + q
+#    xdo kill
+super + p
+    dmenu_run
+
+super + Return
+		$TERMINAL
+
+super + c
+		$BROWSER
+super + shift + c
+    killall $BROWSER
+
+super + shift + v
+		systemctl is-active --quiet libvirtd && virt-manager || { notify-send "Starting libvirtd" && sudo systemctl start libvirtd && virt-manager }
+
+## Lock Screen
+super + shift + x
+		slock
+
+## screen stuff
+super + alt + s
+		themr -s | xargs -I ! notify-send "!"
+super + alt + w
+		themr -w | xargs -I ! notify-send "!"
+super + alt + t
+		themr -t | xargs -I ! notify-send "!"
+
+super + shift + s
+		~/.scripts/screens/SelectMonitor
+
+## Pass
+super + shift + p
+		$XDG_SCRIPTS_HOME/dmenu/passmenu2 &
+
+## Rice Todo List
+super + shift + t
+		$XDG_SCRIPTS_HOME/dmenu/todo &
+
+# F keys
+super + F1
+		spotify &
+super + F2
+		$XDG_SCRIPTS_HOME/startkill telegram &
+super + F3
+		neomut &
+super + F4
+		$XDG_SCRIPTS_HOME/startkill discord &
+
+# keyboard
+super + alt + d
+		setxkbmap -layout de
+super + alt + e
+		setxkbmap -layout us,de -variant ,qwerty
+
+#super + F5
+#		todo: suspend
+super + F6
+		$XDG_SCRIPTS_HOME/dmenu/promt "Hibernate?" "systemctl hibernate" &
+super + F7
+		$XDG_SCRIPTS_HOME/dmenu/promt "Poweroff?" "poweroff" &
+super + F8
+		$XDG_SCRIPTS_HOME/dmenu/promt "Reboot?" "reboot" &
+
+#super + F9
+#super + F10
+		# kill wm
+super + F11
+		$XDG_SCRIPTS_HOME/dmenu/dmenumount &
+super + F12
+		$XDG_SCRIPTS_HOME/dmenu/dmenuumount &
+
+## Audio Control
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+		$XDG_SCRIPTS_HOME/system/notifications/alter-volume.sh {+5%,-5%}
+
+XF86AudioMute
+		$XDG_SCRIPTS_HOME/system/notifications/alter-volume.sh toggle
+
+{XF86AudioPlay,XF86AudioPause,XF86AudioNext,XF86AudioPrev}
+		playerctl {play-pause, play-pause, next, previous}
+
+
+## Brightness
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+		$XDG_SCRIPTS_HOME/system/notifications/alter-brightness.sh {-A 20,-U 20}

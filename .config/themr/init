@@ -1,0 +1,17 @@
+#!/bin/bash
+
+[ -d "$1" ] && selTheme=$1 || exit 128
+appPath=$(dirname "$0")
+
+# todo pull wallpaper form repo
+
+[ ! -f "$selTheme/xresources.xrdb" ] && exit 1
+
+cat "$selTheme/xresources.xrdb" "$appPath/xresources.xrdb" | xrdb
+dwm-msg --ignore-reply run_command load_xresources;
+"$XDG_SCRIPTS_HOME/shell/alacritty-xresources.sh"
+
+# set st
+"$XDG_SCRIPTS_HOME/bar/bar.bar"
+# temprary
+setxkbmap -option caps:escape

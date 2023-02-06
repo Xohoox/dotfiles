@@ -1,0 +1,3 @@
+#!/bin/sh
+
+$(find $XDG_SCRIPTS_HOME -type f | grep -Ef $XDG_CONFIG_HOME/dotfiles/path-blacklist | grep $1 || exit) "$(echo $* | cut -d' ' -f2-)"

@@ -1,0 +1,48 @@
+*.font: JetBrainsMono Nerd Font:pixelsize=22:antialias=true:autohint=true:autohint=true;
+
+!!! variables
+#define fg #cccccc
+#define bg #1e1e1e
+#define cursor #cccccc
+#define black_dark #000000
+#define black #666666
+#define red_dark #c62f37
+#define red #e94a51
+#define green_dark #37be78
+#define green #45d38a
+#define yellow_dark #e2e822
+#define yellow #f2f84a
+#define blue_dark #396ec7
+#define blue #4e8ae9
+#define magenta_dark #b835bc
+#define magenta #d26ad6
+#define cyan_dark #3ba7cc
+#define cyan #49b7da
+#define white_dark #e5e5e5
+#define white #e5e5e5
+
+! dwm
+dwm.borderpx: 2
+dwm.gappx: 10
+dwm.snap: 32
+dwm.showbar: 1
+dwm.topbar: 1
+dwm.nmaster: 1
+dwm.resizehints: 1
+dwm.mfact: 0.55
+
+! dwm colors
+!dwm.normbgcolor:
+dwm.normbordercolor: #251f4a
+!dwm.normfgcolor:
+!dwm.selbgcolor:
+dwm.selbordercolor: #cb5049
+!dwm.selfgcolor:
+
+!dmenu.font : font or font set
+dmenu.background: #282828
+dmenu.foreground : #ebdbb2
+dmenu.selbackground : #458588
+dmenu.selforeground : #cc241d
+
+themr.wallpaper: default

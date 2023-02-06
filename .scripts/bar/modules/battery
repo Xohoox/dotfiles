@@ -1,0 +1,14 @@
+#!/bin/sh
+
+BAT=$(acpi | tail -1 | awk 'NR==1 gsub (/[%,]/,"") ;NR==1 {print $4}')
+CHR=$(acpi | tail -1 | awk '{print $3}')
+
+[ "$CHR" = '' ] && echo "?" && exit
+
+[ $BAT -le 75 ] && status="" || status=""
+[ $BAT -le 50 ] && status=""
+[ $BAT -le 25 ] && status=""
+[ $BAT -le 10 ] && status=""
+[ "$CHR" != "Discharging," ] && status=""
+
+echo "$status $BAT %"

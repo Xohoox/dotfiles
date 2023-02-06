@@ -1,0 +1,4 @@
+#!/bin/sh
+wm="$(wmctrl -m | grep Name | awk '{ print $2 }')"
+[ "$wm" = "dwm" ] && pkill dwm-start && exit
+[ "$wm" = "i3" ] && i3-msg exit && exit

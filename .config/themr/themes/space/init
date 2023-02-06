@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# xrdb
+#xrdb xresources.xrdb
+
+# set dwm
+#dwm-msg run_command load_xresources
+
+# set st
+
+# set wallpaper
+
+# run polybar

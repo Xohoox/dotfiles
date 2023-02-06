@@ -1,0 +1,12 @@
+#!/bin/sh
+
+WIFI=$(nmcli -g DEVICE,NAME connection | grep -E '^wlp3s0:' | awk -F: '{print $2}')
+strength=$(nmcli -g IN-USE,BARS device wifi | grep -E '^\*' | awk -F: '{print $2}')
+
+ETH=$(nmcli -g DEVICE,NAME connection | grep -E '^eno1:')
+
+flightmode=$(rfkill -o TYPE,SOFT list | grep -E 'wlan' | awk '{print $2}')
+
+[ "$flightmode" = 'gesperrt' ] && echo "" && exit
+[ "$ETH" != '' ] && echo " LAN" && exit
+[ "$WIFI" != '' ] && echo " $WIFI $strength" && exit || echo "" && exit

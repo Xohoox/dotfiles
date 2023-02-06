@@ -1,0 +1,5 @@
+#!/bin/sh
+filename="$XDG_PICTURES_DIR/screenshots/scs_$(date +'%Y-%m-%d_%H-%M-%S').jpg"
+[ "$1" ] && scrot "$1" $filename || 
+				scrot $filename || exit
+echo $filename | xclip -sel clip

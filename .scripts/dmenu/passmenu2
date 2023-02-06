@@ -1,0 +1,6 @@
+#!/bin/sh
+
+password=$(find $XDG_DATA_HOME/pass -name '*.gpg' -type f -printf "%P\n"| sed 's/\.gpg//' | dmenu || exit) || exit
+#password=$(find $PASSWORD_STORE_DIR -name '*.gpg' -type f -printf "%P\n"| sed 's/\.gpg//' | dmenu || exit) || exit
+pass show -c "$password" 2> /dev/null
+#pass show -c "$password" 2>> $HOME/pass.log # 2> /dev/null

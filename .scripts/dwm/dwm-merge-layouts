@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd $XDG_REPOS_HOME/suckless/dwm
+git checkout layouts
+git reset --hard origin/master && 
+
+for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d'/' -f3); do
+	 grep 'layout_' $branch && echo $branch && git merge $branch -m $branch || exit
+done

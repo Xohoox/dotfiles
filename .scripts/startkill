@@ -1,0 +1,10 @@
+#!/bin/sh
+
+f() {
+				[ -z "$(pgrep "$1")" ] && $2 || pkill "$1"
+				exit
+}
+[ "$2" ] && f $1 $2
+[ "$1" = "discord" ]	&& f "Discord" "discord"
+[ "$1" = "signal" ]		&& f "signal-desktop" "signal-desktop"
+[ "$1" = "telegram" ]	&& f "telegram-deskto" "telegram-desktop"

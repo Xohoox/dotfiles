@@ -1,0 +1,2 @@
+#!/bin/sh
+btrfs filesystem usage / 2> /dev/null | awk 'NR==7 {print $3}'

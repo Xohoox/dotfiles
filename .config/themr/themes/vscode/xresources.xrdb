@@ -1,0 +1,48 @@
+!*.font: JetBrainsMono Nerd Font:pixelsize=22:antialias=true:autohint=true:autohint=true;
+!*.font: Comic Code:style=Regular:pixelsize=22:antialias=true:autohint=true;
+
+!!! variables
+#define fg #D4D4D4
+#define bg #1E1E1E
+#define cursor #cccccc
+#define black_dark #666666
+#define black #808080
+#define red_dark #F44747
+#define red #D16969
+#define green_dark #6A9955
+#define green #B5CEA8
+#define yellow_dark #D7BA7D
+#define yellow #DCDCAA
+#define blue_dark #569CD6
+#define blue #9CDCFE
+#define magenta_dark #646695
+#define magenta #C586C0
+#define cyan_dark #4EC9B0
+#define cyan #4EC9B0
+#define white_dark #e5e5e5
+#define white #e5e5e5
+
+! dwm
+dwm.borderpx: 2
+dwm.gappx: 10
+dwm.snap: 32
+dwm.showbar: 1
+dwm.topbar: 1
+dwm.nmaster: 1
+dwm.resizehints: 1
+dwm.mfact: 0.55
+
+! dwm colors
+!dwm.normbgcolor:
+dwm.normbordercolor: bg
+!dwm.normfgcolor:
+dwm.selbordercolor: blue_dark
+!dwm.selfgcolor:
+
+!dmenu.font : font or font set
+dmenu.background: bg
+dmenu.foreground : fg
+dmenu.selbackground : blue
+dmenu.selforeground : fg
+
+themr.wallpaper: zima

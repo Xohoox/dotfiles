@@ -1,0 +1,3 @@
+#!/bin/sh
+
+brave --new-window --kiosk --app=https://open.spotify.com &

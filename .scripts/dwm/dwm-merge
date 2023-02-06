@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd "$XDG_REPOS_HOME/suckless/dwm"
+git checkout master
+
+for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d'/' -f3); do
+	[ "$branch" != "master" ] && [ "$branch" = "$(echo $branch | sed 's/layout_//')" ] &&
+					echo $branch && git merge $branch -m $branch || exit
+done

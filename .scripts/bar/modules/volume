@@ -1,0 +1,17 @@
+#!/bin/sh
+
+maxvol=150
+
+max_volume()
+{
+		VOL=$(amixer get Master | grep -E -o '[0-9]{0,3}%' | grep -E -o '[0-9]{0,3}' | sort -u)
+		[ $VOL -gt $maxvol ] && pactl set-sink-volume 0 "$maxvol"% && max_volume
+}
+
+max_volume
+mute=$(amixer get Master | grep -E -o '(\[off\])' | sort -u)
+
+[ "$VOL" -le 65 ] && status="󰖀" || status="󰕾"
+[ "$VOL" -le 20 ] && status="󰕿"
+[ $mute ] && status="󰝟"
+echo "$status $VOL %"

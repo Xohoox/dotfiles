@@ -1,0 +1,5 @@
+#!/bin/sh
+# themr -s "$(cat $XDG_DATA_HOME/themr/selectedScreenProfile)" || {
+# themr -s 1-schreibtisch || xrdb $XDG_CONFIG_HOME/X11/xresources; }
+
+[ "$(tty)" = "/dev/tty1" ] && exec $XDG_SCRIPTS_HOME/dwm/dwm-start

@@ -1,0 +1,4 @@
+#!/bin/sh
+cd $XDG_REPOS_HOME/suckless/dwm
+rm -f config.h
+sudo make -j5 clean install

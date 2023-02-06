@@ -1,0 +1,76 @@
+*.font: Mono:pixelsize=20:antialias=true:autohint=true;
+*.alpha: .8
+
+!!! colors
+! special
+*.foreground: #f5f5dc
+*.background: #050307
+*.cursorColor:  #f4eee1
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+! green
+*.color2:       #97d01a
+*.color10:      #97d01a
+! yellow
+*.color3:       #FBA922
+*.color11:      #FBA922
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+! magenta
+*.color5:       #9C3885
+*.color13:      #E628BA
+! cyan
+*.color6:       #6FC2EF
+*.color14:      #6FC2EF
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
+
+!!! mouse
+!Xcursor.theme: Simple-and-Soft
+!Xcursor.size: 32
+
+
+!!! dwm
+dwm.borderpx: 3
+dwm.gappx: 10
+dwm.snap: 32
+dwm.swallowfloating: 0
+dwm.showbar: 1
+dwm.topbar: 1
+dwm.nmaster: 1
+dwm.resizehints: 1
+dwm.mfact: 0.55
+
+!dwm.fonts: SFMono-Regular:size=15
+
+!font bar
+!dwm.col_font: #A54242
+!active tag
+!dwm.col_focused: #A54242
+!second monitor active tag
+!dwm.col_invfocused: #491D1D
+!bar & inactive tags bg
+!dwm.col_unfocused: #1D1F21
+!inactive window border
+!dwm.col_background: #1D1F21
+
+dwm.normbordercolor: #1D1F21
+dwm.selbordercolor: #A54242
+
+
+!!! dmenu
+!dmenu.font: Mono:size=15
+dmenu.background: #1D1F21
+dmenu.foreground: #A54242
+dmenu.selbackground: #A54242
+dmenu.selforeground: #1D1F21
+
+themr.wallpaper: tom
