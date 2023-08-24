@@ -4,7 +4,7 @@ BROWSER brave
 
 PATH $PATH:$HOME/.scripts:$HOME/.scripts/dmenu:$HOME/.script/system:$HOME/.scripts/dwm:$HOME/.scripts/wm:$HOME/.local/bin
 #PATH $PATH:$(find $XDG_SCRIPTS_HOME -type d | grep -vEf $XDG_CONFIG_HOME/amadeus/path-blacklist | paste -sd ':')
-#TERM alacritty
+TERM xterm
 
 #PAGER nvimpager
 FZF_DEFAULT_OPS '--border=rounded'
