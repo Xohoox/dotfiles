@@ -23,7 +23,7 @@ gchf()
 
 sshf()
 {
-	host=$(cat $HOME/.ssh/hosts | fzf $fzfstyle --prompt='ssh ')
+	host=$(fzf $fzfstyle --prompt='ssh ' < "$HOME/.ssh/hosts" )
 	[ "$host" != "" ] && ssh "$(echo "$host" | cut -f2 -d ' ')"
 }
 
