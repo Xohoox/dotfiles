@@ -1,3 +1,17 @@
+-- install pack
+local ensure_packer = function()
+  local fn = vim.fn
+  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  if fn.empty(fn.glob(install_path)) > 0 then
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    vim.cmd [[packadd packer.nvim]]
+    return true
+  end
+  return false
+end
+
+local packer_bootstrap = ensure_packer()
+
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
@@ -39,6 +53,10 @@ return require('packer').startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
   use 'williamboman/mason.nvim'
+  use 'mfussenegger/nvim-jdtls'
+
+  -- debug
+  use 'mfussenegger/nvim-dap'
 
   -- snipets
   use 'L3MON4D3/LuaSnip'
@@ -57,6 +75,15 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
   use 'nvim-treesitter/playground'
 
+  -- treesitter syntax highliting
+  use 'MDeiml/tree-sitter-markdown'
+  use {
+    'fei6409/log-highlight.nvim',
+    config = function()
+        require('log-highlight').setup {}
+    end,
+  }
+
   -- lua
   use 'nanotee/luv-vimdocs'
   use 'milisims/nvim-luaref'
@@ -68,9 +95,9 @@ return require('packer').startup(function(use)
   }
 
   -- images
-  use 'edluffy/hologram.nvim'
+  -- use 'edluffy/hologram.nvim'
 
   -- plugins in development
-  use '/home/fynn/rep/nvim-plugins/run-shell.nvim'
+  --use '/home/fynn/rep/nvim-plugins/run-shell.nvim'
 
 end)

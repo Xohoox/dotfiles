@@ -26,8 +26,9 @@ zsh_add_plugin "unixorn/fzf-zsh-plugin" &&
 zsh_add_plugin "skywind3000/z.lua" &&
 zsh_add_plugin "Xohoox/sudo.zsh" &&
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting" &&
-zsh_add_plugin "Xohoox/zsh-abbr-minimal" &&
-zsh_add_file   "keybindings.zsh"
+#zsh_add_plugin "Xohoox/zsh-abbr-minimal" &&
+zsh_add_file   "keybindings.zsh" &&
+source_file /usr/share/doc/fzf/examples/key-bindings.zsh
 ')
 # zsh_add_plugin "bobthecow/git-flow-completion"
 

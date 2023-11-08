@@ -82,3 +82,11 @@ map('n', '<leader>y', 'gg<c-c>G<c-o>', {})
 -- blank line
 map('n', '<leader>O', ":<c-u>put!=repeat([''],v:count)<bar>']+1<cr>", { noremap = true, silent = true })
 map('n', '<leader>o', ":<c-u>put =repeat([''],v:count)<bar>'[-1<cr>", { noremap = true, silent = true })
+
+-- terminal
+map('n', '<leader>t', ':split | terminal<cr>', { noremap = true, silent = true})
+
+-- map('n', '<A-j>', ':bn<cr>', opt_silent)
+-- map('n', '<A-k>', ':bp<cr>', opt_silent)
+-- map('n', '<M-j>', ':bn<cr>', opt_silent)
+-- map('n', '<M-k>', ':bp<cr>', opt_silent)

@@ -14,6 +14,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 vim.cmd('autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o')
 
+vim.cmd('augroup ths_ft au! autocmd BufNewFile,BufRead *.ths set filetype=javascript')
+
+-- vim.api.nvim_create_autocmd("BufNewFile,BufRead", {
+--     group = "ths_ft",
+--     pattern = { "*.ths" },
+--     command = "set filetype=javascript",
+-- })
+
 -- augroup numbertoggle
 -- 	autocmd!
 -- 	autocmd BufWritePre * %s/\s\+$//e
