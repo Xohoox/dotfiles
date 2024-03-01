@@ -89,10 +89,13 @@ return require('packer').startup(function(use)
   use 'milisims/nvim-luaref'
 
   -- file explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-	tag = 'nightly'
-  }
+  use 'nvim-tree/nvim-tree.lua'
+  --
+  -- file explorer
+  --use {
+    --'nvim-tree/nvim-tree.lua',
+	--tag = 'nightly'
+  --}
 
   -- images
   -- use 'edluffy/hologram.nvim'
