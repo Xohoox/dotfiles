@@ -114,4 +114,4 @@ wget  wget --hsts-file=$XDG_CACHE_HOME/wget/wget-hsts
 # gap   git apply
 # # todo: git tag
 
-:q
+:q exit
