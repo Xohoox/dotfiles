@@ -1,5 +1,6 @@
 require("fink.options")
 require("fink.keymaps")
-require("fink.packer")
+--require("fink.packer")
 require("fink.autocmd")
 require("fink.globals")
+require("fink.lazy")

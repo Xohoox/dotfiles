@@ -5,13 +5,12 @@ local opt_silent = { silent = true }
 
 -- map leader key
 map('n', '<Space>', '', {})
-vim.g.mapleader = ' '
 map('n', 'Q', '<nop>', {})
 
 -- search / replace
 map('n', '<leader>r', ':%s//gI<Left><Left><Left>', {})
 map('v', '<leader>r', ':s//gI<Left><Left><Left>', {})
-map('n', '<leader>w', ':nohlsearch<cr>', opt_silent)  -- sinnvolle taste
+map('n', '<Esc>', ':nohlsearch<cr>', opt_silent)  -- sinnvolle taste
 map('n', 'n', 'nzzzv', opt_normap)
 map('n', 'N', 'Nzzzv', opt_normap)
 
