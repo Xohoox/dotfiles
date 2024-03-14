@@ -120,8 +120,8 @@ gps   git push
 # gpu   git push -u
 gf    git fetch
 gst   git stash
-# gstl  git stash list
-# gstp  git stash pop
+gstl  git stash list
+gstp  git stash pop
 gb    git branch
 gbd   git branch -D
 # gbm   git branch -m
@@ -137,3 +137,5 @@ grh   git reset --hard
 gcpk  git cherry-pick
 gap   git apply
 # todo: git tag
+
+sv sudoedit

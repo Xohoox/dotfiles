@@ -113,3 +113,5 @@ wget  wget --hsts-file=$XDG_CACHE_HOME/wget/wget-hsts
 # gcpk  git cherry-pick
 # gap   git apply
 # # todo: git tag
+
+:q
