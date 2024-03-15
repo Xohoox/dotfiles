@@ -20,6 +20,7 @@ return {
 					"xml",
 					"rust",
 					"javascript",
+					"hyprlang",
 				},
 				-- Autoinstall languages that are not installed
 				auto_install = true,
@@ -27,9 +28,11 @@ return {
 				indent = { enable = true },
 			})
 
-			-- There are additional nvim-treesitter modules that you can use to interact
-			-- with nvim-treesitter. You should go explore a few and see what interests you:
-			--
+			vim.filetype.add({
+				pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+			})
+
+			-- TODO:
 			--    - Incremental selection: Included, see :help nvim-treesitter-incremental-selection-mod
 			--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
