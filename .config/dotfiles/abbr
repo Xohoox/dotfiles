@@ -3,8 +3,8 @@
 dl youtube-dl
 mix pacmixer
 kitvpn sudo openvpn --config $HOME/ppr/kit/kit.ovpn
-sxiv nsxiv
-img nsxiv
+sxiv lximage-qt
+img lximage-qt
 x xrandr
 
 # cd

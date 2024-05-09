@@ -3,6 +3,8 @@
 cdwm  cd $XDG_REPOS_HOME/suckless/dwm
 cdst  cd $XDG_REPOS_HOME/suckless/st
 
+o xdg-open
+
 # ls
 l  lsd -l
 ls   lsd
