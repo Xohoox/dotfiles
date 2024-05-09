@@ -117,3 +117,5 @@ wget  wget --hsts-file=$XDG_CACHE_HOME/wget/wget-hsts
 # # todo: git tag
 
 :q exit
+
+cd613 cd ~/projects/p0613/

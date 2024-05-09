@@ -2,7 +2,7 @@ EDITOR nvim
 TERMINAL alacritty
 BROWSER brave
 
-PATH $PATH:$HOME/.scripts:$HOME/.scripts/dmenu:$HOME/.script/system:$HOME/.scripts/dwm:$HOME/.scripts/wm:$HOME/.local/bin
+PATH $PATH:$HOME/.scripts:$HOME/.scripts/dmenu:$HOME/.script/system:$HOME/.scripts/dwm:$HOME/.scripts/wm:$HOME/.local/bin:/snap/bin
 #PATH $PATH:$(find $XDG_SCRIPTS_HOME -type d | grep -vEf $XDG_CONFIG_HOME/amadeus/path-blacklist | paste -sd ':')
 TERM xterm
 
@@ -50,3 +50,8 @@ HISTFILESIZE 1000000
 HISTSIZE 1000000
 SAVEHIST $HISTSIZE
 HIST_IGNORE_DUPS
+
+p550 /home/fynn/work/p0550-mre-cmis
+p555 /home/fynn/work/p0555-fresenius-ot
+wd /mnt/c/Users/fynn.michell-auli/Downloads
+wp /mnt/c/Users/fynn.michell-auli/Documents

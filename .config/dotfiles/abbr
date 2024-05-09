@@ -6,6 +6,7 @@ kitvpn sudo openvpn --config $HOME/ppr/kit/kit.ovpn
 sxiv lximage-qt
 img lximage-qt
 x xrandr
+psu ps -fwwu $(whoami)
 
 # cd
 h     cd ~
