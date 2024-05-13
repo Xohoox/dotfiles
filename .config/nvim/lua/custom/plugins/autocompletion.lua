@@ -17,6 +17,7 @@ return {
 				end)(),
 			},
 			"saadparwaiz1/cmp_luasnip",
+			"rcarriga/cmp-dap",
 
 			-- Adds other completion capabilities.
 			--  nvim-cmp does not ship with all sources by default. They are split
@@ -37,6 +38,12 @@ return {
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			luasnip.config.setup({})
+
+			cmp.setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
+				sources = {
+					{ name = "dap" },
+				},
+			})
 
 			cmp.setup({
 				snippet = {
@@ -100,6 +107,7 @@ return {
 							nvim_lua = "[api]",
 							path = "[path]",
 							luasnip = "[snip]",
+							dap = "[dap]",
 							-- gh_issues = "[issues]",
 							-- tn = "[TabNine]",
 						},

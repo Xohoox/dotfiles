@@ -1,5 +1,6 @@
 return {
-	{ -- LSP Configuration & Plugins
+	{ "mfussenegger/nvim-jdtls" },
+	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for neovim
@@ -100,11 +101,11 @@ return {
 			--  - settings (table): Override the default settings passed when initializing the server.
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
-				-- clangd = {},
+				clangd = {},
 				-- gopls = {},
 				pyright = {},
 				rust_analyzer = {},
-				jdtls = {},
+				-- jdtls = {},
 				bashls = {},
 				-- tsserver = {},
 
