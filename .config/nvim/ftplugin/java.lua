@@ -52,7 +52,10 @@ local config = {
 				},
 			},
 			format = {
-				enabled = false,
+				settings = {
+					url = "/home/fynn/.local/share/spell/spell_java_formatter.xml",
+					profile = "Spell",
+				},
 			},
 		},
 	},

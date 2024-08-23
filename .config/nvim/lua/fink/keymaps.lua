@@ -83,6 +83,7 @@ map("n", "<leader>o", ":<c-u>put =repeat([''],v:count)<bar>'[-1<cr>", { noremap 
 
 -- terminal
 map("n", "<leader>t", ":split | terminal<cr>", { noremap = true, silent = true })
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
 
 map("n", "<A-l>", ":bn<cr>", opt_silent)
 map("n", "<A-h>", ":bp<cr>", opt_silent)

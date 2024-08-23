@@ -24,8 +24,15 @@ return {
 				},
 				-- Autoinstall languages that are not installed
 				auto_install = true,
-				highlight = { enable = true },
+				highlight = {
+					enable = true,
+					additional_vim_regex_highlighting = false,
+					-- custom_captures = {
+					-- 	["javascript"] = "javascript",
+					-- },
+				},
 				indent = { enable = true },
+				-- autotag = { enable = true },
 			})
 
 			vim.filetype.add({
@@ -39,4 +46,17 @@ return {
 		end,
 	},
 	"nvim-treesitter/playground",
+	-- {
+	-- 	"windwp/nvim-ts-autotag",
+	-- 	config = function()
+	-- 		require("nvim-ts-autotag").setup({
+	-- 			opts = {
+	-- 				-- Defaults
+	-- 				enable_close = true, -- Auto close tags
+	-- 				enable_rename = true, -- Auto rename pairs of tags
+	-- 				enable_close_on_slash = false, -- Auto close on trailing </
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 }

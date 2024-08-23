@@ -107,6 +107,17 @@ return {
 				rust_analyzer = {},
 				-- jdtls = {},
 				bashls = {},
+				phpactor = {},
+				-- lemminx = {
+				-- 	settings = {
+				-- 		xml = {
+				-- 			server = {
+				-- 				workDir = "~/.local/cache/lemminx",
+				-- 				single_file_support = true,
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
 				-- tsserver = {},
 
 				lua_ls = {
