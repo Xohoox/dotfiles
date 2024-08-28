@@ -43,3 +43,11 @@ dwmapply()
 	[ "$(pwd)" != "$XDG_REPOS_HOME/suckless/dwm" ] && return
 	git apply $(find "$XDG_DOWNLOAD_DIR/dwm-patches/" -type f | fzf "$fzfstyle" --prompt='git apply ' || return)
 }
+
+p()
+{
+	[ -d "$HOME/projects" ] || return
+	cd "$HOME/projects/$(find "$HOME/projects" -mindepth 1 -maxdepth 1 -type d -printf '%T@ %f\n' | sort --reverse -k1 -n | cut -f 2 -d ' ' | fzf || return)"
+	[ -f './init.sh' ] || return
+	source './init.sh'
+}
