@@ -51,12 +51,12 @@ local config = {
 					enabled = "all", -- literals, all, none
 				},
 			},
-			format = {
-				settings = {
-					url = "/home/fynn/.local/share/spell/spell_java_formatter.xml",
-					profile = "Spell",
-				},
-			},
+			-- format = {
+			-- 	settings = {
+			-- 		url = "/home/fynn/.local/share/spell/spell_java_formatter.xml",
+			-- 		profile = "Spell",
+			-- 	},
+			-- },
 		},
 	},
 

@@ -35,6 +35,24 @@ return {
 				end,
 			},
 		},
+		config = function()
+			local Worktree = require("git-worktree")
+
+			Worktree.on_tree_change(function(op, metadata)
+				if op == Worktree.Operations.Switch then
+					print("Switched from " .. metadata.prev_path .. " to " .. metadata.path)
+					if os.getenv("HOOK_SWITCH_WORKTREE_SCRIPT") then
+						os.execute(
+							os.getenv("HOOK_SWITCH_WORKTREE_SCRIPT")
+								.. " "
+								.. metadata.prev_path
+								.. " "
+								.. metadata.path
+						)
+					end
+				end
+			end)
+		end,
 	},
 	{ "tpope/vim-fugitive" },
 }
