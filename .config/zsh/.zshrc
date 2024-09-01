@@ -38,3 +38,7 @@ zsh_add_file 'prompt.zsh'
 zsh_add_file 'completion.zsh'
 zsh_add_file 'vimMode.zsh'
 source_file "$XDG_SCRIPTS_HOME/functions/posix/fuzzy.sh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
