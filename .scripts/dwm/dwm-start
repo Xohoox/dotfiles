@@ -2,5 +2,6 @@
 while true; do
 #	[ -f $XDG_SCRIPTS_HOME/bar/bar.bar ] && $XDG_SCRIPTS_HOME/bar/bar.bar &
 	#themr -s fehrnseher.conf || themr -s schreibtisch.conf || themr -s laptop.conf
+	mkdir -p "$XDG_CACHE_HOME/dwm/"
 	dwm 2> $XDG_CACHE_HOME/dwm/dwm.log
 done

@@ -1,14 +1,14 @@
 #!/bin/sh
 killall polybar
 
-bar="bar"
+bar="$XDG_CONFIG_HOME/polybar/bars/basic.ini bar"
 
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar -q --reload $bar > /dev/null &
+    MONITOR=$m polybar --reload --config=$bar > /dev/null &
   done
 else
-  polybar -q --reload $bar > /dev/null &
+  polybar -q --reload --config=$bar > /dev/null &
 fi
 
 # Run the bars

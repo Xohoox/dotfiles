@@ -2,6 +2,6 @@
 
 #add to path /home/fynn/.local/bin
 # start X
-if [[ "$(tty)" = "/dev/tty1" ]]; then
+if [[ "$(tty)" = "/dev/tty3" ]]; then
 	exec startx $XINITRC
 fi

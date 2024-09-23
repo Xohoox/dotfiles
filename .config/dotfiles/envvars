@@ -1,6 +1,6 @@
 EDITOR nvim
 TERMINAL alacritty
-BROWSER brave
+BROWSER brave-browser
 
 PATH $PATH:$HOME/.scripts:$HOME/.scripts/dmenu:$HOME/.script/system:$HOME/.scripts/dwm:$HOME/.scripts/wm:$HOME/.local/bin:/snap/bin
 #PATH $PATH:$(find $XDG_SCRIPTS_HOME -type d | grep -vEf $XDG_CONFIG_HOME/amadeus/path-blacklist | paste -sd ':')

@@ -23,10 +23,10 @@ rn rename
 
 # pkg mgr
 # todo: across distros
-p   pacman
-pS  sudo pacman -S
-pq  sudo pacman -Q
-pr sudo pacman -Rns
+# p   pacman
+# pS  sudo pacman -S
+# pq  sudo pacman -Q
+# pr sudo pacman -Rns
 # p   pacman
 # pSs pacman -Ss
 # pS  sudo pacman -S

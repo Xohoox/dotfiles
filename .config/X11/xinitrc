@@ -1,0 +1,16 @@
+#!/bin/sh
+
+xcompmgr &
+sxhkd &
+numlockx &
+xbanish -t 4 &
+dunst &
+setxkbmap -option caps:escape
+# setxkbmap de
+# xmodmap $XDG_CONFIG_HOME/X11/xmodmap.conf
+# themr -s schreibtisch || themr -s fehrnseher || themr -s laptop
+redshift -l 49.00296479534133:8.41242528864624 &
+
+brightnessctl --device='tpacpi::kbd_backlight' set 2
+# Start dwm
+exec dwm-start
