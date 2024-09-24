@@ -28,9 +28,9 @@ zsh_add_plugin "Xohoox/sudo.zsh" &&
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting" &&
 zsh_add_plugin "Xohoox/zsh-abbr-minimal" &&
 zsh_add_file   "keybindings.zsh" &&
-source_file /usr/share/doc/fzf/examples/key-bindings.zsh
 ')
 # zsh_add_plugin "bobthecow/git-flow-completion"
+#source_file /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # Load files
 zsh_add_file 'options.zsh'
@@ -39,6 +39,12 @@ zsh_add_file 'completion.zsh'
 zsh_add_file 'vimMode.zsh'
 source_file "$XDG_SCRIPTS_HOME/functions/posix/fuzzy.sh"
 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#757575,bold"
+# ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

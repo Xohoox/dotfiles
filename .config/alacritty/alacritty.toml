@@ -28,10 +28,9 @@ shape = "Block"
 
 [font]
 size = 12
-normal = { family = "Comic Code NerdFont", style = "Regular" }
-bold = { family = "Comic Code NerdFont", style = "Bold" }
-italic = { family = "Comic Code NerdFont", style = "Italic" }
-bold_italic = { family = "Comic Code NerdFont", style = "Bold Italic" }
+normal = { family = "Comic Code NerdFont Mono", style = "Regular" }
+italic = { family = "Comic Code NerdFont Mono", style = "Italic" }
+bold_italic = { family = "Comic Code NerdFont Mono", style = "Bold Italic" }
 
 [[keyboard.bindings]]
 action = "ScrollLineUp"
@@ -217,3 +216,6 @@ opacity = 1
 [window.padding]
 x = 2
 y = 1
+
+[shell]
+program = "zsh"
